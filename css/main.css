@@ -1,0 +1,45 @@
+body{
+	background-color: #c0c0c0;
+	font-family: tahoma;
+}
+div.header{
+	background-color: #A0A0A0;
+	padding: 0px;
+}
+h1 {
+	text-align: center;
+	padding: 50px 0 50px 0;
+	font-size: 250%;
+	font-family: tahoma;
+	font-weight: bold;
+	color: blue;
+}
+h2 {
+	text-align: center;
+	font-size: 175%;
+	padding: 20px 0 20px 0;
+	background-color: #C8C8C8;
+}
+div.entry-list{
+	text-align: center;
+	border-radius: 50px;
+}
+div.items{
+	text-align: center;
+}
+.entry-list input{
+	font-size: 18pt;
+}
+div.entry-list{
+	padding: 20px;
+}
+li.item span{
+	font-size: 18pt;
+}
+div.items{
+	text-align: left;
+	padding-left: 400px;
+}
+div.edit{
+	text-align: right;
+}
