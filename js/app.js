@@ -23,12 +23,40 @@
   	});
 });  THIS WORKS BUT ONLY PRINTS .VAL WHEN HITTING ENTER.*/
 
+ 
+
 $(document).ready(function() { 
-  $('input#target').keypress(function(e) {
-  if(e.keyCode == 13) {
-  	 
+  //$('input#target').keypress(function(e) {
+  //if(e.keyCode == 13) {
+
+  	$('#add-item').submit(function() { 
   	var target = $('input#target').val();
-  	 $('span').append ('<li>target</li>');
-  		} 
+
+  	var html = '<li class="item">' + 
+		'<input type="checkbox">' + 
+		'<span>' + target + '</span>' + 
+		'<div class="float-right">' +  
+		'<input type="button" value="edit">' + 
+		'<input type="button" value="remove">' + 
+		'</div>' +
+		'</li>';
+
+  	 $('ul').append(html);
+  	 event.preventDefault();
+
+  	  $('span').click(function() {
+  	  	 // $('span').wrap('p');
+          $(this).toggleClass('strike');
+
+
+     });
+  		
   	});
 });
+
+// $(document).ready(function() {    
+    // Let's bind a strikethrough event to 
+    // ul#unbound li
+    //$("ul.item").click(function() {
+       // $(this).toggleClass('strike');
+    // });

@@ -1,5 +1,5 @@
 body{
-	background-color: #c0c0c0;
+	background-color: white;
 	font-family: tahoma;
 }
 div.header{
@@ -42,4 +42,12 @@ div.items{
 }
 div.edit{
 	text-align: right;
+}
+.float-right{
+	float: right;
+}
+
+.strike  {
+    text-decoration: line-through;
+    opacity: .3;
 }
