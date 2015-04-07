@@ -32,7 +32,7 @@ $(document).ready(function() {
   	$('#add-item').submit(function() { 
   	var target = $('input#target').val();
 
-  	var html = '<li class="item">' + 
+  	var html =  '<li class="item">' + 
 		'<input type="checkbox">' + 
 		'<span>' + target + '</span>' + 
 		'<div class="float-right">' +  
@@ -44,19 +44,22 @@ $(document).ready(function() {
   	 $('ul').append(html);
   	 event.preventDefault();
 
-  	  $('span').click(function() {
-  	  	 // $('span').wrap('p');
-          $(this).toggleClass('strike');
+  	  // $('span').click(function() {
+  	  	  // $(this).toggleClass('strike');
+			// });
+            
+            // EVENT DELEGATION (doesn't seem to work correctly)
+  		  $('li').on('click','span', function() {
+  		 	 $(this).toggleClass('strike');
 
+  		  
+  		  // $('li').on('click','.remove', function() {
+  		 	 // $(this).toggleClass('strike');
 
-     });
-  		
-  	});
-});
+  		  		// });
+  		  	  });
 
-// $(document).ready(function() {    
-    // Let's bind a strikethrough event to 
-    // ul#unbound li
-    //$("ul.item").click(function() {
-       // $(this).toggleClass('strike');
-    // });
+  		  });
+  		});
+
+ 
