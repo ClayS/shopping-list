@@ -48,7 +48,7 @@ $(document).ready(function() {
   	  	  // $(this).toggleClass('strike');
 			// });
             
-            // EVENT DELEGATION (doesn't seem to work correctly)
+            // EVENT DELEGATION (seems to work correctly)
   		  $('ul').on('click','span', 'li', function() {
   		 	 $(this).toggleClass('strike');
 
